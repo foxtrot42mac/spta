@@ -55,6 +55,12 @@ partial forgetting is possible: the words pressed serve as episodic memory
 anchors — the word  reminds the user *why* they pressed at that
 moment, reconstructing the forgotten letter without any server-side hint.
 
+> **Prototype note:** This reference implementation stores the phrase in plaintext
+> at  for simplicity. A production implementation should
+> store only the per-letter timing baseline (mean/sigma arrays) and derive
+> letter membership during auth from the user's live input — the phrase text
+> is not needed server-side at any point.
+
 ## Security Analysis
 
 | Phrase                     | Est. bits (no device seed) | With timing layer |
@@ -70,7 +76,14 @@ with a device seed as second factor.
 
 ## Build & Run
 
+```sh
+gcc -std=c99 -O2 -o spta spta.c -lm
+./spta enroll    # register your phrase and capture timing baseline
+./spta auth      # authenticate
+./spta test      # run self-tests (no phrase input required)
+```
 
+Requires: Linux/macOS, gcc, POSIX terminal.
 
 ## Self-Test Output
 
