@@ -89,7 +89,7 @@ in prior authentication schemes.
 
 ## License
 
-Public domain (CC0). Timestamp of first public disclosure: see commit date.
+See LICENSE. Non-commercial use free. Commercial use requires permission. Priority: 2026-06-19.
 
 ## Discussion
 
