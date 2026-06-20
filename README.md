@@ -87,7 +87,25 @@ Requires: Linux/macOS, gcc, POSIX terminal.
 
 ## Self-Test Output
 
+```
+=== SPTA Self-Test ===
 
+Test 1: Letter coverage in word list...
+  Coverage test: PASS
+
+Test 2: PRNG reproducibility...
+  Reproducibility: PASS
+  Distinction:     PASS
+
+Test 3: Z-score verification logic...
+  z=0.00 AUTH   PASS
+  z=1.98 AUTH   PASS
+  z=2.00 COERCE PASS
+  z=8.00 REJECT PASS
+  Z-score test: PASS
+
+=== Self-test complete ===
+```
 
 ## Prior Art & Positioning
 
